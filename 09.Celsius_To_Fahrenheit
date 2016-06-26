@@ -1,0 +1,12 @@
+using System;
+
+class Celsius_To_Fahrenheit
+{
+    static void Main(string[] args)
+    {
+        Console.Write("Insert temperature in celsius = ");
+        double tempCelsius = double.Parse(Console.ReadLine());
+        double tempFahrenheit = (tempCelsius * 1.8) + 32;
+        Console.WriteLine(Math.Round(tempFahrenheit, 2));
+    }
+}
