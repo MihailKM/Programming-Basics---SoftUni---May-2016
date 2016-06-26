@@ -1,0 +1,13 @@
+using System;
+
+class Trapezoid_Area
+{
+    static void Main(string[] args)
+    {
+        float b1 = float.Parse(Console.ReadLine());
+        float b2 = float.Parse(Console.ReadLine());
+        float h = float.Parse(Console.ReadLine());
+        float result = ((b1 + b2) * h) / 2;
+        Console.WriteLine(result);
+    }
+}
