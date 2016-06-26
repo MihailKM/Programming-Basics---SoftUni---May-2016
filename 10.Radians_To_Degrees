@@ -1,0 +1,12 @@
+using System;
+
+class Radians_To_Degrees
+{
+    static void Main()
+    {
+        Console.Write("Insert angle size in radians = ");
+        double radians = double.Parse(Console.ReadLine());
+        double degrees = radians * (180 / Math.PI);
+        Console.WriteLine("Angle size in degrees = {0}", Math.Round(degrees));
+    }
+}
