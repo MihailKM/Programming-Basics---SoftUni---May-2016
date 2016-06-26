@@ -1,0 +1,103 @@
+using System;
+
+class Currency_Converter_2
+{
+    static void Main(string[] args)
+    {
+        double value = double.Parse(Console.ReadLine());
+        var curency = Console.ReadLine();
+        var toCurency = Console.ReadLine();
+
+        var bgn = 1.0;
+        var usd = 1.79549;
+        var eur = 1.95583;
+        var gbp = 2.53405;
+
+        while (curency == "BGN")
+        {
+            if (toCurency == "USD")
+            {
+                usd = value / usd;
+                Console.WriteLine(Math.Round(usd, 2) + " " + toCurency);
+                break;
+            }
+            if (toCurency == "EUR")
+            {
+                eur = value / eur;
+                Console.WriteLine(Math.Round(eur, 2) + " " + toCurency);
+                break;
+            }
+            if (toCurency == "GBP")
+            {
+                gbp = value / gbp;
+                Console.WriteLine(Math.Round(gbp, 2) + " " + toCurency);
+                break;
+            }
+
+        }
+
+        while (curency == "USD")
+        {
+            if (toCurency == "BGN")
+            {
+                bgn = usd * value;
+                Console.WriteLine(Math.Round(bgn, 2) + " " + toCurency);
+                break;
+            }
+            if (toCurency == "EUR")
+            {
+                eur = (usd * value) / eur;
+                Console.WriteLine(Math.Round(eur, 2) + " " + toCurency);
+                break;
+            }
+            if (toCurency == "GBP")
+            {
+                gbp = (usd * value) / gbp;
+                Console.WriteLine(Math.Round(gbp, 2) + " " + toCurency);
+                break;
+            }
+        }
+        while (curency == "EUR")
+        {
+            if (toCurency == "USD")
+            {
+                usd = (eur * value) / usd;
+                Console.WriteLine(Math.Round(usd, 2) + " " + toCurency);
+                break;
+            }
+            if (toCurency == "BGN")
+            {
+                bgn = gbp * value;
+                Console.WriteLine(Math.Round(bgn, 2) + " " + toCurency);
+                break;
+            }
+            if (toCurency == "GBP")
+            {
+                gbp = (eur * value) / gbp;
+                Console.WriteLine(Math.Round(gbp, 2) + " " + toCurency);
+                break;
+            }
+        }
+        while (curency == "GBP")
+        {
+            if (toCurency == "USD")
+            {
+                usd = (gbp * value) / usd;
+                Console.WriteLine(Math.Round(usd, 2) + " " + toCurency);
+                break;
+            }
+            if (toCurency == "EUR")
+            {
+                eur = (gbp * value) / eur;
+                Console.WriteLine(Math.Round(eur, 2) + " " + toCurency);
+                break;
+            }
+            if (toCurency == "BGN")
+            {
+                bgn = gbp * value;
+                Console.WriteLine(Math.Round(bgn, 2) + " " + toCurency);
+                break;
+            }
+        }
+    }
+}
