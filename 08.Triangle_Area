@@ -1,0 +1,12 @@
+using System;
+
+class Triangle_Area
+{
+    static void Main()
+    {
+        double a = double.Parse(Console.ReadLine());
+        double h = double.Parse(Console.ReadLine());
+        double triangleArea = a * h / 2;
+        Console.WriteLine(Math.Round(triangleArea, 2));
+    }
+}
