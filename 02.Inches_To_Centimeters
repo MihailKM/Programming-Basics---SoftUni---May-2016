@@ -1,0 +1,12 @@
+using System;
+
+class Inches_To_Centimeters
+{
+    static void Main()
+    {
+        Console.Write("Inches = ");
+        decimal numberInches = decimal.Parse(Console.ReadLine());
+        decimal numberCentimeters = 2.54M;
+        Console.WriteLine("Centimeters = " + (numberInches * numberCentimeters));
+    }
+}
