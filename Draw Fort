@@ -4,20 +4,12 @@ class Fortress
     static void Main(string[] args)
     {
         int n = int.Parse(Console.ReadLine());
+
         var fortressTowerCap = '/' + (new string('^', n / 2)) + '\\';
-        var fortressMiddle = 0;
+        var fortressMiddle = 2 * n - 2 * (n / 2) - 4;
         var fortressTowerBottom = '\\' + (new string('_', n / 2)) + '/';
 
-        if (n >= 5)
-        {
-            fortressMiddle = n;
-        }
-        else
-        {
-            fortressMiddle = 1;
-        }
-
-        Console.WriteLine("{0}{1}{0}", fortressTowerCap, new string('_', fortressMiddle / 2), fortressTowerCap);
+        Console.WriteLine("{0}{1}{0}", fortressTowerCap, new string('_', fortressMiddle), fortressTowerCap);
 
         for (int row = 0; row < n - 3; row++)
         {
@@ -25,12 +17,11 @@ class Fortress
             Console.Write(new string(' ', (n * 2) - 2));
             Console.WriteLine('|');
         }
-
         if (n >= 5)
         {
             Console.Write('|');
             Console.Write(new string(' ', (n + 2) / 2));
-            Console.Write(new string('_', fortressMiddle / 2));
+            Console.Write(new string('_', fortressMiddle));
             Console.Write(new string(' ', (n + 2) / 2));
             Console.WriteLine('|');
         }
@@ -41,6 +32,6 @@ class Fortress
             Console.WriteLine('|');
         }
 
-        Console.WriteLine("{0}{1}{0}", fortressTowerBottom, new string(' ', fortressMiddle / 2), fortressTowerBottom);
+        Console.WriteLine("{0}{1}{0}", fortressTowerBottom, new string(' ', fortressMiddle), fortressTowerBottom);
     }
 }
